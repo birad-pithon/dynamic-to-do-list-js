@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const taskText = taskInput.value.trim(); // Get and trim input value
 
         // Validate input
-        if (taskText === "") {
+        if (taskText === "add task") {
             alert("Please enter a task.");
             return;
         }
@@ -36,14 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
         // Clear input field
         taskInput.value = '';
     }
+  document.addEventListener('DOMContentLoaded', () => {
+    const addButton = document.getElementById('add-task-btn');
+    const taskInput = document.getElementById('task-input');
+    const taskList = document.getElementById('task-list');
 
-    // Event listener for Add Task button
+    function addTask() {
+        // ... insert the code block above here ...
+    }
+
     addButton.addEventListener('click', addTask);
-
-    // Event listener for Enter key press in input field
-    taskInput.addEventListener('keypress', function (event) {
+    taskInput.addEventListener('keypress', (event) => {
         if (event.key === 'Enter') {
             addTask();
         }
     });
 });
+
